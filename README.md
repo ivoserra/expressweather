@@ -1,57 +1,17 @@
-# Hidden from the frontend; a proxy API
+# Full stack
 
-- Create a simple backend
-- One endpoint: /weather 
-    - this will respond with a string describing the current weather in Berlin
-    - response should be very simple, for example a string like `It's 11 degrees in Berlin`
-    - use axios to get the weather from https://openweathermap.org/api
- 
-- Research: What does "proxy" mean? How is this application a proxy? Add your answer directly into the README here :)
+## Create a simple frontend
 
+- Use React if you want, but it's not necessary
+- One text input asking for a city name, one button
+- When you click the button, use fetch() to POST a request
+- Send whatever the user has written to the input field in the body of the request
+- When you get the result, display that somehow :)
 
-## an Api Proxy 
+## Create a simple backend
 
-An API proxy is a thin application program interface (API) server that exposes an interface for an existing service or services. A "proxy" is something that acts as an agent or intermediary for something else. 
-
-An API proxy is a software element that connects to back-end services, then creates a more modern and useful API to connect to the front end.
-
-API proxies allow developers to define an API without having to change underlying services in the back end. This works by decoupling the front-end API from the back-end services, which is what shields the app from code changes on the back end. The benefit to an API proxy is that it is essentially a simple and lightweight API gateway.
-
-
-
-
-
-
-- **Optional bonus** every time someone requests the weather, make a note of that writing a line into a log file; "Weather requested at 14:04"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-🐻
+- One endpoint: POST /weather
+- When a request comes, read the requested city from the request body
+- Respond with the current weather in the requested city as a simple string
+- Choose interesting information from the request & response
+- Save the interesting information into a lowdb "database"
